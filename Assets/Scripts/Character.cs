@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Character : MonoBehaviour
+public class Character
 {
     public string charName;
     public int level;

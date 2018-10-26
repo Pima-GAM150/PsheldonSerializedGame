@@ -1,20 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class SaveCharacter : MonoBehaviour {
+public class SaveCharacter : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
+    public TMP_InputField nameInput;
+
+    // Use this for initialization
+    void Start()
+    {
         Character newCharacter = new Character();
-        newCharacter.charName = null;
+        newCharacter.charName = nameInput.text;
 
 
         string json = JsonUtility.ToJson(newCharacter);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
 }
