@@ -25,26 +25,26 @@ public class PlayerMovement : MonoBehaviour {
         if (moveHorizontal < 0 && currentVelocity.x <= 0)
         {
             newVelocityX = -speed;
-            animator.SetFloat("DirectionX", -1f);
+            animator.SetInteger("DirectionX", -1);
         } else if (moveHorizontal > 0 && currentVelocity.x >= 0)
         {
             newVelocityX = speed;
-            animator.SetFloat("DirectionX", 1f);
+            animator.SetInteger("DirectionX", 1);
         } else {
-            animator.SetFloat("DirectionX", 0);
+            animator.SetInteger("DirectionX", 0);
         }
 
         float newVelocityY = 0f;
         if (moveVertical < 0 && currentVelocity.y <= 0)
         {
             newVelocityY = -speed;
-            animator.SetFloat("DirectionY", -1f);
+            animator.SetInteger("DirectionY", -1);
         } else if (moveVertical > 0 && currentVelocity.y >= 0)
         {
             newVelocityY = speed;
-            animator.SetFloat("DirectionY", 1f);
+            animator.SetInteger("DirectionY", 1);
         } else {
-            animator.SetFloat("DirectionY", 0);
+            animator.SetInteger("DirectionY", 0);
         }
 
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(newVelocityX, newVelocityY);
