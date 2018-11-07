@@ -6,6 +6,9 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     private float speed;
 
+    [SerializeField]
+    private Animator animator;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -22,18 +25,26 @@ public class PlayerMovement : MonoBehaviour {
         if (moveHorizontal < 0 && currentVelocity.x <= 0)
         {
             newVelocityX = -speed;
+            animator.SetFloat("DirectionX", -1f);
         } else if (moveHorizontal > 0 && currentVelocity.x >= 0)
         {
             newVelocityX = speed;
+            animator.SetFloat("DirectionX", 1f);
+        } else {
+            animator.SetFloat("DirectionX", 0);
         }
 
         float newVelocityY = 0f;
         if (moveVertical < 0 && currentVelocity.y <= 0)
         {
             newVelocityY = -speed;
+            animator.SetFloat("DirectionY", -1f);
         } else if (moveVertical > 0 && currentVelocity.y >= 0)
         {
             newVelocityY = speed;
+            animator.SetFloat("DirectionY", 1f);
+        } else {
+            animator.SetFloat("DirectionY", 0);
         }
 
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(newVelocityX, newVelocityY);
