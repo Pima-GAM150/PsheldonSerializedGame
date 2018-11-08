@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class UnitStats : MonoBehaviour {
 
-    public string unitName;
     public float health;
     public float mana;
     public float attack;

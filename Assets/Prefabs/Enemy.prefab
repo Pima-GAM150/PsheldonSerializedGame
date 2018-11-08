@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4607599328687542}
   - component: {fileID: 114099970863869354}
   - component: {fileID: 212041465044851960}
+  - component: {fileID: 114145164808801730}
+  - component: {fileID: 114709962375273114}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -52,7 +54,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aff3778c7c74ba4b863ebadf41642af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: 
   health: 0
   mana: 0
   attack: 0
@@ -60,6 +61,29 @@ MonoBehaviour:
   defense: 0
   mDefense: 0
   speed: 0
+--- !u!114 &114145164808801730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878546905147786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e81230494937d4fa20590289ce5948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuItem: {fileID: 0}
+--- !u!114 &114709962375273114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878546905147786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a857948059b8a8f4cbb434e089822a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212041465044851960
 SpriteRenderer:
   m_ObjectHideFlags: 1

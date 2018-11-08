@@ -15,6 +15,7 @@ public class SaveCharacter : MonoBehaviour
         newCharacter.charName = nameInput.text;
 
 
-        string json = JsonUtility.ToJson(newCharacter);
+        string characterJson = JsonUtility.ToJson(newCharacter);
+        DontDestroyOnLoad(newCharacter);
     }
 }
